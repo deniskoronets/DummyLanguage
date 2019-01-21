@@ -1,0 +1,67 @@
+'g:statements':
+  sequence:
+    - 'g:statement'
+    - '?g:statements'
+
+'g:statement':
+  or:
+    - 'g:var_assign'
+    - 'g:if'
+    - 'g:print'
+
+'g:print':
+  sequence:
+    - 'PRINT'
+    - 'g:expression'
+    - ';'
+
+'g:if':
+  sequence:
+    - 'IF'
+    - '('
+    - 'g:expression'
+    - ')'
+    - '{'
+    - 'g:statements'
+    - '}'
+    - 'ELSE'
+    - '{'
+    - 'g:statements'
+    - '}'
+
+'g:var_assign':
+  sequence:
+    - 'LET'
+    - 'WORD'
+    - '='
+    - 'g:expression'
+    - ';'
+
+'g:scalar_or_var':
+  or:
+    - 'g:expression_var_usage'
+    - 'g:expression_scalar_num'
+    - 'g:expression_scalar_string'
+
+'g:expression':
+  sequence:
+    - 'g:scalar_or_var'
+    - '?g:_expression'
+
+'g:_expression':
+  sequence:
+    - 'MATH_OPERATOR'
+    - 'g:scalar_or_var'
+    - '?g:_expression'
+
+'g:expression_var_usage':
+  sequence:
+    - 'WORD'
+
+'g:expression_scalar_num':
+  sequence:
+    - 'NUMBER'
+
+'g:expression_scalar_string':
+  sequence:
+    - 'STRING'

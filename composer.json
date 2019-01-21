@@ -1,0 +1,12 @@
+{
+    "require": {
+        "php": "7.2",
+        "dekor/php-syntax-tree-builder": "dev-master",
+        "symfony/yaml": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    }
+}
