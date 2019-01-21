@@ -16,7 +16,7 @@ class DummyLanguage
      * @return ASTNode
      * @throws \Dekor\PhpSyntaxTreeBuilder\Exceptions\LexerAnalyseException
      */
-    private function parseProgramm(string $program) : ASTNode
+    private function parseProgram(string $program) : ASTNode
     {
         $lexer = new Lexer(Yaml::parseFile(__DIR__ . '/configs/lexems.yml'));
         $lexems = $lexer->parse($program);
@@ -35,9 +35,11 @@ class DummyLanguage
      */
     public function run(string $program)
     {
+        file_put_contents('file.json', json_encode($this->parseProgram($program), JSON_PRETTY_PRINT));
+
         /**
          * @var Statements
          */
-        $statements = (new SyntaxTreeConvertor($this->parseProgramm($program)))->convert();
+        $statements = (new SyntaxTreeConvertor($this->parseProgram($program)))->convert();
     }
 }

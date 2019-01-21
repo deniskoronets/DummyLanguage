@@ -22,11 +22,15 @@
     - 'g:expression'
     - ')'
     - '{'
-    - 'g:statements'
+    - '?g:statements'
     - '}'
+    - '?g:else'
+
+'g:else':
+  sequence:
     - 'ELSE'
     - '{'
-    - 'g:statements'
+    - '?g:statements'
     - '}'
 
 'g:var_assign':
