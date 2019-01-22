@@ -1,7 +1,18 @@
-if (a + 1) {
-    print a;
+let a = 10 - 10;
+
+let b = a + 11;
+
+print a;
+print b;
+
+//print c;
+
+let c = b + a;
+
+if (a) {
+    print "a is non-zero";
 } else {
-    print b;
+    print "a is zero";
 }
 
-let a = 1;
+print c;

@@ -6,6 +6,8 @@ use Dekor\PhpSyntaxTreeBuilder\ASTNode;
 use Dekor\PhpSyntaxTreeBuilder\Lexer;
 use Dekor\PhpSyntaxTreeBuilder\Parser;
 use src\constructions\Statements;
+use src\core\exceptions\DummyRuntimeException;
+use src\core\ExecuteMachine;
 use Symfony\Component\Yaml\Yaml;
 
 class DummyLanguage
@@ -41,5 +43,14 @@ class DummyLanguage
          * @var Statements
          */
         $statements = (new SyntaxTreeConvertor($this->parseProgram($program)))->convert();
+
+        file_put_contents('prepared.json', var_export($statements, 1));
+
+        try {
+            (new ExecuteMachine($statements))->execute();
+
+        } catch (DummyRuntimeException $exception) {
+            echo PHP_EOL . ' >>>>>>>>>>> Error! ' . $exception->getMessage() . PHP_EOL;
+        }
     }
 }

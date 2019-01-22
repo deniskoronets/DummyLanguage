@@ -1,0 +1,142 @@
+src\constructions\Statements::__set_state(array(
+   'statements' => 
+  array (
+    0 => 
+    src\constructions\VarAssign::__set_state(array(
+       'varName' => 'a',
+       'expression' => 
+      src\constructions\Expression::__set_state(array(
+         'left' => 
+        src\constructions\ScalarValue::__set_state(array(
+           'type' => 'int',
+           'value' => '10',
+        )),
+         'operator' => '-',
+         'right' => 
+        src\constructions\ScalarValue::__set_state(array(
+           'type' => 'int',
+           'value' => '10',
+        )),
+      )),
+    )),
+    1 => 
+    src\constructions\VarAssign::__set_state(array(
+       'varName' => 'b',
+       'expression' => 
+      src\constructions\Expression::__set_state(array(
+         'left' => 
+        src\constructions\VarUsage::__set_state(array(
+           'varName' => 'a',
+        )),
+         'operator' => '+',
+         'right' => 
+        src\constructions\ScalarValue::__set_state(array(
+           'type' => 'int',
+           'value' => '11',
+        )),
+      )),
+    )),
+    2 => 
+    src\constructions\PrintExpression::__set_state(array(
+       'expression' => 
+      src\constructions\Expression::__set_state(array(
+         'left' => 
+        src\constructions\VarUsage::__set_state(array(
+           'varName' => 'a',
+        )),
+         'operator' => NULL,
+         'right' => NULL,
+      )),
+    )),
+    3 => 
+    src\constructions\PrintExpression::__set_state(array(
+       'expression' => 
+      src\constructions\Expression::__set_state(array(
+         'left' => 
+        src\constructions\VarUsage::__set_state(array(
+           'varName' => 'b',
+        )),
+         'operator' => NULL,
+         'right' => NULL,
+      )),
+    )),
+    4 => 
+    src\constructions\VarAssign::__set_state(array(
+       'varName' => 'c',
+       'expression' => 
+      src\constructions\Expression::__set_state(array(
+         'left' => 
+        src\constructions\VarUsage::__set_state(array(
+           'varName' => 'b',
+        )),
+         'operator' => '+',
+         'right' => 
+        src\constructions\VarUsage::__set_state(array(
+           'varName' => 'a',
+        )),
+      )),
+    )),
+    5 => 
+    src\constructions\IfStatement::__set_state(array(
+       'expression' => 
+      src\constructions\Expression::__set_state(array(
+         'left' => 
+        src\constructions\VarUsage::__set_state(array(
+           'varName' => 'a',
+        )),
+         'operator' => NULL,
+         'right' => NULL,
+      )),
+       'trueStatements' => 
+      src\constructions\Statements::__set_state(array(
+         'statements' => 
+        array (
+          0 => 
+          src\constructions\PrintExpression::__set_state(array(
+             'expression' => 
+            src\constructions\Expression::__set_state(array(
+               'left' => 
+              src\constructions\ScalarValue::__set_state(array(
+                 'type' => 'string',
+                 'value' => 'a is non-zero',
+              )),
+               'operator' => NULL,
+               'right' => NULL,
+            )),
+          )),
+        ),
+      )),
+       'elseStatements' => 
+      src\constructions\Statements::__set_state(array(
+         'statements' => 
+        array (
+          0 => 
+          src\constructions\PrintExpression::__set_state(array(
+             'expression' => 
+            src\constructions\Expression::__set_state(array(
+               'left' => 
+              src\constructions\ScalarValue::__set_state(array(
+                 'type' => 'string',
+                 'value' => 'a is zero',
+              )),
+               'operator' => NULL,
+               'right' => NULL,
+            )),
+          )),
+        ),
+      )),
+    )),
+    6 => 
+    src\constructions\PrintExpression::__set_state(array(
+       'expression' => 
+      src\constructions\Expression::__set_state(array(
+         'left' => 
+        src\constructions\VarUsage::__set_state(array(
+           'varName' => 'c',
+        )),
+         'operator' => NULL,
+         'right' => NULL,
+      )),
+    )),
+  ),
+))

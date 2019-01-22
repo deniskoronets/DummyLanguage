@@ -2,7 +2,7 @@
 
 namespace src\constructions;
 
-class PrintExpression
+class PrintExpression extends Construction
 {
     public $expression;
 

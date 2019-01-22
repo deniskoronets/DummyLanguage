@@ -2,18 +2,18 @@
     "group": "g:statements",
     "subGroups": {
         "g:statement": {
-            "group": "g:if",
+            "group": "g:var_assign",
             "subGroups": {
                 "g:expression": {
                     "group": "g:expression",
                     "subGroups": {
                         "g:scalar_or_var": {
-                            "group": "g:expression_var_usage",
+                            "group": "g:expression_scalar_num",
                             "subGroups": [],
                             "lexems": [
                                 {
-                                    "name": "WORD",
-                                    "value": "a",
+                                    "name": "NUMBER",
+                                    "value": "10",
                                     "line": 1
                                 }
                             ]
@@ -27,7 +27,7 @@
                                     "lexems": [
                                         {
                                             "name": "NUMBER",
-                                            "value": "1",
+                                            "value": "10",
                                             "line": 1
                                         }
                                     ]
@@ -37,13 +37,108 @@
                             "lexems": [
                                 {
                                     "name": "MATH_OPERATOR",
-                                    "value": "+",
+                                    "value": "-",
                                     "line": 1
                                 }
                             ]
                         }
                     },
                     "lexems": []
+                }
+            },
+            "lexems": [
+                {
+                    "name": "LET",
+                    "value": "",
+                    "line": 1
+                },
+                {
+                    "name": "WORD",
+                    "value": "a",
+                    "line": 1
+                },
+                {
+                    "name": "=",
+                    "value": "",
+                    "line": 1
+                },
+                {
+                    "name": ";",
+                    "value": "",
+                    "line": 1
+                }
+            ]
+        },
+        "g:statements": {
+            "group": "g:statements",
+            "subGroups": {
+                "g:statement": {
+                    "group": "g:var_assign",
+                    "subGroups": {
+                        "g:expression": {
+                            "group": "g:expression",
+                            "subGroups": {
+                                "g:scalar_or_var": {
+                                    "group": "g:expression_var_usage",
+                                    "subGroups": [],
+                                    "lexems": [
+                                        {
+                                            "name": "WORD",
+                                            "value": "a",
+                                            "line": 3
+                                        }
+                                    ]
+                                },
+                                "g:_expression": {
+                                    "group": "g:_expression",
+                                    "subGroups": {
+                                        "g:scalar_or_var": {
+                                            "group": "g:expression_scalar_num",
+                                            "subGroups": [],
+                                            "lexems": [
+                                                {
+                                                    "name": "NUMBER",
+                                                    "value": "11",
+                                                    "line": 3
+                                                }
+                                            ]
+                                        },
+                                        "g:_expression": null
+                                    },
+                                    "lexems": [
+                                        {
+                                            "name": "MATH_OPERATOR",
+                                            "value": "+",
+                                            "line": 3
+                                        }
+                                    ]
+                                }
+                            },
+                            "lexems": []
+                        }
+                    },
+                    "lexems": [
+                        {
+                            "name": "LET",
+                            "value": "",
+                            "line": 3
+                        },
+                        {
+                            "name": "WORD",
+                            "value": "b",
+                            "line": 3
+                        },
+                        {
+                            "name": "=",
+                            "value": "",
+                            "line": 3
+                        },
+                        {
+                            "name": ";",
+                            "value": "",
+                            "line": 3
+                        }
+                    ]
                 },
                 "g:statements": {
                     "group": "g:statements",
@@ -61,7 +156,7 @@
                                                 {
                                                     "name": "WORD",
                                                     "value": "a",
-                                                    "line": 2
+                                                    "line": 5
                                                 }
                                             ]
                                         },
@@ -74,22 +169,15 @@
                                 {
                                     "name": "PRINT",
                                     "value": "",
-                                    "line": 2
+                                    "line": 5
                                 },
                                 {
                                     "name": ";",
                                     "value": "",
-                                    "line": 2
+                                    "line": 5
                                 }
                             ]
                         },
-                        "g:statements": null
-                    },
-                    "lexems": []
-                },
-                "g:else": {
-                    "group": "g:else",
-                    "subGroups": {
                         "g:statements": {
                             "group": "g:statements",
                             "subGroups": {
@@ -106,7 +194,7 @@
                                                         {
                                                             "name": "WORD",
                                                             "value": "b",
-                                                            "line": 4
+                                                            "line": 6
                                                         }
                                                     ]
                                                 },
@@ -119,116 +207,299 @@
                                         {
                                             "name": "PRINT",
                                             "value": "",
-                                            "line": 4
+                                            "line": 6
                                         },
                                         {
                                             "name": ";",
                                             "value": "",
-                                            "line": 4
+                                            "line": 6
                                         }
                                     ]
                                 },
-                                "g:statements": null
+                                "g:statements": {
+                                    "group": "g:statements",
+                                    "subGroups": {
+                                        "g:statement": {
+                                            "group": "g:var_assign",
+                                            "subGroups": {
+                                                "g:expression": {
+                                                    "group": "g:expression",
+                                                    "subGroups": {
+                                                        "g:scalar_or_var": {
+                                                            "group": "g:expression_var_usage",
+                                                            "subGroups": [],
+                                                            "lexems": [
+                                                                {
+                                                                    "name": "WORD",
+                                                                    "value": "b",
+                                                                    "line": 10
+                                                                }
+                                                            ]
+                                                        },
+                                                        "g:_expression": {
+                                                            "group": "g:_expression",
+                                                            "subGroups": {
+                                                                "g:scalar_or_var": {
+                                                                    "group": "g:expression_var_usage",
+                                                                    "subGroups": [],
+                                                                    "lexems": [
+                                                                        {
+                                                                            "name": "WORD",
+                                                                            "value": "a",
+                                                                            "line": 10
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "g:_expression": null
+                                                            },
+                                                            "lexems": [
+                                                                {
+                                                                    "name": "MATH_OPERATOR",
+                                                                    "value": "+",
+                                                                    "line": 10
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "lexems": []
+                                                }
+                                            },
+                                            "lexems": [
+                                                {
+                                                    "name": "LET",
+                                                    "value": "",
+                                                    "line": 10
+                                                },
+                                                {
+                                                    "name": "WORD",
+                                                    "value": "c",
+                                                    "line": 10
+                                                },
+                                                {
+                                                    "name": "=",
+                                                    "value": "",
+                                                    "line": 10
+                                                },
+                                                {
+                                                    "name": ";",
+                                                    "value": "",
+                                                    "line": 10
+                                                }
+                                            ]
+                                        },
+                                        "g:statements": {
+                                            "group": "g:statements",
+                                            "subGroups": {
+                                                "g:statement": {
+                                                    "group": "g:if",
+                                                    "subGroups": {
+                                                        "g:expression": {
+                                                            "group": "g:expression",
+                                                            "subGroups": {
+                                                                "g:scalar_or_var": {
+                                                                    "group": "g:expression_var_usage",
+                                                                    "subGroups": [],
+                                                                    "lexems": [
+                                                                        {
+                                                                            "name": "WORD",
+                                                                            "value": "a",
+                                                                            "line": 12
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "g:_expression": null
+                                                            },
+                                                            "lexems": []
+                                                        },
+                                                        "g:statements": {
+                                                            "group": "g:statements",
+                                                            "subGroups": {
+                                                                "g:statement": {
+                                                                    "group": "g:print",
+                                                                    "subGroups": {
+                                                                        "g:expression": {
+                                                                            "group": "g:expression",
+                                                                            "subGroups": {
+                                                                                "g:scalar_or_var": {
+                                                                                    "group": "g:expression_scalar_string",
+                                                                                    "subGroups": [],
+                                                                                    "lexems": [
+                                                                                        {
+                                                                                            "name": "STRING",
+                                                                                            "value": "a is non-zero",
+                                                                                            "line": 13
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                "g:_expression": null
+                                                                            },
+                                                                            "lexems": []
+                                                                        }
+                                                                    },
+                                                                    "lexems": [
+                                                                        {
+                                                                            "name": "PRINT",
+                                                                            "value": "",
+                                                                            "line": 13
+                                                                        },
+                                                                        {
+                                                                            "name": ";",
+                                                                            "value": "",
+                                                                            "line": 13
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "g:statements": null
+                                                            },
+                                                            "lexems": []
+                                                        },
+                                                        "g:else": {
+                                                            "group": "g:else",
+                                                            "subGroups": {
+                                                                "g:statements": {
+                                                                    "group": "g:statements",
+                                                                    "subGroups": {
+                                                                        "g:statement": {
+                                                                            "group": "g:print",
+                                                                            "subGroups": {
+                                                                                "g:expression": {
+                                                                                    "group": "g:expression",
+                                                                                    "subGroups": {
+                                                                                        "g:scalar_or_var": {
+                                                                                            "group": "g:expression_scalar_string",
+                                                                                            "subGroups": [],
+                                                                                            "lexems": [
+                                                                                                {
+                                                                                                    "name": "STRING",
+                                                                                                    "value": "a is zero",
+                                                                                                    "line": 15
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        "g:_expression": null
+                                                                                    },
+                                                                                    "lexems": []
+                                                                                }
+                                                                            },
+                                                                            "lexems": [
+                                                                                {
+                                                                                    "name": "PRINT",
+                                                                                    "value": "",
+                                                                                    "line": 15
+                                                                                },
+                                                                                {
+                                                                                    "name": ";",
+                                                                                    "value": "",
+                                                                                    "line": 15
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "g:statements": null
+                                                                    },
+                                                                    "lexems": []
+                                                                }
+                                                            },
+                                                            "lexems": [
+                                                                {
+                                                                    "name": "ELSE",
+                                                                    "value": "",
+                                                                    "line": 14
+                                                                },
+                                                                {
+                                                                    "name": "{",
+                                                                    "value": "",
+                                                                    "line": 14
+                                                                },
+                                                                {
+                                                                    "name": "}",
+                                                                    "value": "",
+                                                                    "line": 16
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "lexems": [
+                                                        {
+                                                            "name": "IF",
+                                                            "value": "",
+                                                            "line": 12
+                                                        },
+                                                        {
+                                                            "name": "(",
+                                                            "value": "",
+                                                            "line": 12
+                                                        },
+                                                        {
+                                                            "name": ")",
+                                                            "value": "",
+                                                            "line": 12
+                                                        },
+                                                        {
+                                                            "name": "{",
+                                                            "value": "",
+                                                            "line": 12
+                                                        },
+                                                        {
+                                                            "name": "}",
+                                                            "value": "",
+                                                            "line": 14
+                                                        }
+                                                    ]
+                                                },
+                                                "g:statements": {
+                                                    "group": "g:statements",
+                                                    "subGroups": {
+                                                        "g:statement": {
+                                                            "group": "g:print",
+                                                            "subGroups": {
+                                                                "g:expression": {
+                                                                    "group": "g:expression",
+                                                                    "subGroups": {
+                                                                        "g:scalar_or_var": {
+                                                                            "group": "g:expression_var_usage",
+                                                                            "subGroups": [],
+                                                                            "lexems": [
+                                                                                {
+                                                                                    "name": "WORD",
+                                                                                    "value": "c",
+                                                                                    "line": 18
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "g:_expression": null
+                                                                    },
+                                                                    "lexems": []
+                                                                }
+                                                            },
+                                                            "lexems": [
+                                                                {
+                                                                    "name": "PRINT",
+                                                                    "value": "",
+                                                                    "line": 18
+                                                                },
+                                                                {
+                                                                    "name": ";",
+                                                                    "value": "",
+                                                                    "line": 18
+                                                                }
+                                                            ]
+                                                        },
+                                                        "g:statements": null
+                                                    },
+                                                    "lexems": []
+                                                }
+                                            },
+                                            "lexems": []
+                                        }
+                                    },
+                                    "lexems": []
+                                }
                             },
                             "lexems": []
                         }
                     },
-                    "lexems": [
-                        {
-                            "name": "ELSE",
-                            "value": "",
-                            "line": 3
-                        },
-                        {
-                            "name": "{",
-                            "value": "",
-                            "line": 3
-                        },
-                        {
-                            "name": "}",
-                            "value": "",
-                            "line": 5
-                        }
-                    ]
+                    "lexems": []
                 }
-            },
-            "lexems": [
-                {
-                    "name": "IF",
-                    "value": "",
-                    "line": 1
-                },
-                {
-                    "name": "(",
-                    "value": "",
-                    "line": 1
-                },
-                {
-                    "name": ")",
-                    "value": "",
-                    "line": 1
-                },
-                {
-                    "name": "{",
-                    "value": "",
-                    "line": 1
-                },
-                {
-                    "name": "}",
-                    "value": "",
-                    "line": 3
-                }
-            ]
-        },
-        "g:statements": {
-            "group": "g:statements",
-            "subGroups": {
-                "g:statement": {
-                    "group": "g:var_assign",
-                    "subGroups": {
-                        "g:expression": {
-                            "group": "g:expression",
-                            "subGroups": {
-                                "g:scalar_or_var": {
-                                    "group": "g:expression_scalar_num",
-                                    "subGroups": [],
-                                    "lexems": [
-                                        {
-                                            "name": "NUMBER",
-                                            "value": "1",
-                                            "line": 7
-                                        }
-                                    ]
-                                },
-                                "g:_expression": null
-                            },
-                            "lexems": []
-                        }
-                    },
-                    "lexems": [
-                        {
-                            "name": "LET",
-                            "value": "",
-                            "line": 7
-                        },
-                        {
-                            "name": "WORD",
-                            "value": "a",
-                            "line": 7
-                        },
-                        {
-                            "name": "=",
-                            "value": "",
-                            "line": 7
-                        },
-                        {
-                            "name": ";",
-                            "value": "",
-                            "line": 7
-                        }
-                    ]
-                },
-                "g:statements": null
             },
             "lexems": []
         }

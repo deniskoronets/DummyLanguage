@@ -18,18 +18,9 @@ class VarAssign extends Construction
      * VarAssign constructor.
      * @param string $varName
      */
-    public function __construct(string $varName)
+    public function __construct(string $varName, Expression $expression)
     {
         $this->varName = $varName;
-    }
-
-    /**
-     * @param Expression $ex
-     * @return $this
-     */
-    public function setExpression(Expression $ex)
-    {
-        $this->expression = $ex;
-        return $this;
+        $this->expression = $expression;
     }
 }
