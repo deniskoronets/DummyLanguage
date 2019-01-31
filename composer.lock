@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "de4315378304e36dd1bf828b0937e908",
+    "hash": "0f375cf4d4974acc297cf4bef7a526b9",
+    "content-hash": "911b82209462ec488a82ea01fee2e2b5",
     "packages": [
         {
             "name": "dekor/php-syntax-tree-builder",
@@ -12,13 +13,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/deniskoronets/PHP-Syntax-Tree-Builder.git",
-                "reference": "0f64a76b8c66349bf0845adc40956813f1ee7564"
+                "reference": "da65a73958bdd06890e512fa2392b1438264abba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deniskoronets/PHP-Syntax-Tree-Builder/zipball/0f64a76b8c66349bf0845adc40956813f1ee7564",
-                "reference": "0f64a76b8c66349bf0845adc40956813f1ee7564",
+                "url": "https://api.github.com/repos/deniskoronets/PHP-Syntax-Tree-Builder/zipball/da65a73958bdd06890e512fa2392b1438264abba",
+                "reference": "da65a73958bdd06890e512fa2392b1438264abba",
                 "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
             },
             "type": "library",
             "autoload": {
@@ -30,11 +34,11 @@
             "authors": [
                 {
                     "name": "Denis Koronets",
-                    "email": "denis.koronets@devicepros.net"
+                    "email": "deniskoronets@woo.zp.ua"
                 }
             ],
             "description": "This library allows you to build your custom language by describing lexing/parsing rules.",
-            "time": "2019-01-20T19:54:26+00:00"
+            "time": "2019-01-23 16:54:31"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -92,7 +96,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2018-08-06 14:22:27"
         },
         {
             "name": "symfony/yaml",
@@ -151,7 +155,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-03T09:07:35+00:00"
+            "time": "2019-01-03 09:07:35"
         }
     ],
     "packages-dev": [],
@@ -162,6 +166,8 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.0"
+    },
     "platform-dev": []
 }
